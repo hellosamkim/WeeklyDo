@@ -1,0 +1,17 @@
+= form_for(@day) do |f|
+  - @day.description = ""
+  - if @day.errors.any?
+    %div#error_explanation
+      %h2= pluralize(@day.errors.count, "error") 
+      prohibited this day from being saved:"
+
+      %ul
+      - @day.errors.full_messages.each do |message|
+        %li= message
+
+  %div.field
+    = f.label :description
+    %br
+    = f.text_area :description
+  %div.actions
+    = f.submit 
