@@ -1,1 +1,2 @@
 %p= day_task.task
+= link_to "Delete", day_day_task_path(@day, day_task.id), method: :delete, data: { confirm: "Are you sure?" }

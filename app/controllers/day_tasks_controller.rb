@@ -6,6 +6,16 @@
     redirect_to @day
   end
 
+  def destroy
+    @day_task = @day.day_tasks.find(params[:id])
+    if @day_task.destroy
+      flash[:sucess] = "Task was deleted"
+    else
+      flashp[:error] = "Task could not be deleted"
+    end
+    redirect_to @day
+  end
+
   private
     def set_day
       @day = Day.find(params[:day_id])

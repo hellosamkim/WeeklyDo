@@ -5,11 +5,12 @@
   = @day.title
 
 %p
-  %strongDescription:
+  %strong Description:
   = @day.description
 
 %p
   = render @day.day_tasks
+  
 %p
   %div#form
     = render "day_tasks/form"
