@@ -40,3 +40,20 @@
   height: 33vh;
 }
 
+.bg-logo {
+  // margin-top: 50px;
+  opacity: 1;
+  height: 100%;
+}
+
+.bg1, .bg2, .bg3, .bg4, .bg5, .bg6, .bg7 {
+  opacity: 0.7;
+}
+
+.bg1:hover, .bg2:hover, .bg3:hover, .bg4:hover, .bg5:hover, .bg6:hover, .bg7:hover {
+  opacity: 1;
+}
+
+.bg {
+  background-image: url('../images/bg.png');
+}

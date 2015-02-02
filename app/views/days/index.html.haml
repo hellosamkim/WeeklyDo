@@ -6,10 +6,12 @@
       = link_to 'Show', day
 
 %div.row
-  %div.col-md-4{:style => ""}
+  %div.col-md-4.bg
+    %div.bg-logo
+      %img{:src => "/images/logo1.png", :style => "height: 60%; margin-top: 55px;"}
   - @days[-1..-1].each_with_index do |day|
-    %div.col-md-4{:class => "bg#{day.id}", :style => "background: ##{day.bg_colour}"}
+    %div.col-md-4{:class => "bg#{day.id}", :style => "background: ##{day.bg_colour};"}
       = day.title
       = day.description
       = link_to 'Show', day
-  %div.col-md-4
+  %div.col-md-4.bg
