@@ -9,10 +9,12 @@
         = link_to 'Destroy', day, method: :delete, data: { confirm: 'Are you sure?' }
 
   %div.row
+    %div.col-md-4
     - @days[-1..-1].each_with_index do |day|
-      %div.col-md-4.col-xs-4.sngle
+      %div.col-md-4
         = day.title
         = day.description
         = link_to 'Show', day
         = link_to 'Edit', edit_day_path(day) 
         = link_to 'Destroy', day, method: :delete, data: { confirm: 'Are you sure?' }
+    %div.col-md-4
