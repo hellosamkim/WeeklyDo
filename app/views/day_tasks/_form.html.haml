@@ -1,3 +1,6 @@
-= form_for([@day, @day.day_tasks.build]) do |f|
-  = f.text_field :task, :placeholder => "New Task"
-  = f.submit
+= simple_form_for([@day, @day.day_tasks.build]) do |f|
+
+  %div.field
+    = f.text_field :task, :placeholder => "New Task"
+  %div.actions
+    = f.submit

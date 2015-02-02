@@ -1,3 +1,15 @@
-%p= day_task.task
-= link_to "Mark as Finished", finished_day_day_task_path(@day, day_task.id), method: :patch 
-= link_to "Delete", day_day_task_path(@day, day_task.id), method: :delete, data: { confirm: "Are you sure?" }
+%div.clearfix
+  - if day_task.finished? 
+    %div.day_task
+      %p#striked= day_task.task
+    %div.finished
+      = link_to "Mark as Finished", finished_day_day_task_path(@day, day_task.id), method: :patch
+    %div.trash
+      = link_to "Delete", day_day_task_path(@day, day_task.id), method: :delete, data: { confirm: "Are you sure?" }
+  - else
+    %div.day_task
+      %p= day_task.task
+    %div.finished
+      = link_to "Mark as Finished", finished_day_day_task_path(@day, day_task.id), method: :patch
+    %div.trash
+      = link_to "Delete", day_day_task_path(@day, day_task.id), method: :delete, data: { confirm: "Are you sure?" }
