@@ -30,3 +30,32 @@
   overflow: auto;
   zoom: 1;
 }
+
+.row.mid {
+  max-width: 100%;
+}
+
+.sngle {
+  margin-left: 33.34%;
+}
+
+.col-md-4 {
+  text-align: center;
+  height: 100%;
+}
+
+.navbar navbar-default navbar-static-top {
+  height: 30px;
+}
+
+.fullpage {
+  padding: 0;
+  margin: 0;
+  height: 99vh;
+  width: 99vw;
+}
+
+.col-xs-4 {
+  width: 100%;
+  left: -33.34%;
+}

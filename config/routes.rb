@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :days do
     resources :day_tasks do
       member do

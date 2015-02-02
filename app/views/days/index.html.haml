@@ -1,20 +1,18 @@
-%h1 Listing days
+%div.fullpage
+  %div.row
+    - @days[0..-2].each_with_index do |day|
+      %div.col-md-4.col-xs.4
+        = day.title
+        = day.description
+        = link_to 'Show', day
+        = link_to 'Edit', edit_day_path(day) 
+        = link_to 'Destroy', day, method: :delete, data: { confirm: 'Are you sure?' }
 
-%table
-  %thead
-    %tr
-      %th Title
-      %th Description
-      %th{:colspan => "3"}
-
-  %tbody
-    - @days.each do |day|
-      %tr
-        %td= day.title
-        %td= day.description
-        %td= link_to 'Show', day
-        %td= link_to 'Edit', edit_day_path(day) 
-        %td= link_to 'Destroy', day, method: :delete, data: { confirm: 'Are you sure?' }
-%br
-
-= link_to 'New Day', new_day_path
+  %div.row
+    - @days[-1..-1].each_with_index do |day|
+      %div.col-md-4.col-xs-4.sngle
+        = day.title
+        = day.description
+        = link_to 'Show', day
+        = link_to 'Edit', edit_day_path(day) 
+        = link_to 'Destroy', day, method: :delete, data: { confirm: 'Are you sure?' }
