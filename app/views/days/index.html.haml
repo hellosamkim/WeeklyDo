@@ -4,15 +4,17 @@
       %div.col-md-4{:style => "background: ##{day.bg_colour}", :class => "bg#{day.id}"}
         %div.title
           = day.title
-        = day.description
+        %div.description
+          
         
 %div.row
-  %div.col-md-4.bg
-    %img{:src => "/images/logo1.png", :style => "width: 40%; margin-top: 35%;"}
+  %div.col-md-4.bg.bottom-divs
+    %img{:src => "/images/logo1.png", :style => "width: 40%; margin-top: 40%;"}
   - @days[-1..-1].each_with_index do |day|
     %a{:href => day_path(day.id)}
       %div.col-md-4{:class => "bg#{day.id}", :style => "background: ##{day.bg_colour};"}
-        %div.title
+        %div.title#sunday
           = day.title
         = day.description
-  %div.col-md-4.bg
+  %div.col-md-4.bg.bottom-divs
+
