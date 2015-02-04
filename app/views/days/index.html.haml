@@ -5,16 +5,37 @@
         %div.title
           = day.title
         %div.description
-          
+          - if day.day_tasks.empty?
+            %p Currently Nothing To Do This Day!
+          - else
+            %ul
+              - x = 0
+              - day.day_tasks.each do |day_task|
+                - if day_task.finished_at == nil
+                  %li
+                    = day_task.task
+                  - x += 1
+                  - if x >= 3
+                    - break
+
         
 %div.row
   %div.col-md-4.bg.bottom-divs
-    %img{:src => "/images/logo1.png", :style => "width: 40%; margin-top: 40%;"}
+    %img{:src => "/images/logo1.png", :style => "width: 40%; margin-top: 35%;"}
   - @days[-1..-1].each_with_index do |day|
     %a{:href => day_path(day.id)}
       %div.col-md-4{:class => "bg#{day.id}", :style => "background: ##{day.bg_colour};"}
         %div.title#sunday
           = day.title
-        = day.description
+        %div.description
+          - if day.day_tasks.empty?
+            %p Currently Nothing To Do This Day!
+          - else
+            %ul
+              - x = 0
+              - day.day_tasks.each do |day_task|
+                - if day_task.finished_at.empty?
+                  %li
+                    = day_task.task
   %div.col-md-4.bg.bottom-divs
 
