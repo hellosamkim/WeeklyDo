@@ -1,19 +1,20 @@
-%p#idnotice= notice
+%div.full-bg
+  #idnotice= notice
 
-%p
-  %strong Title:
-  = @day.title
+  %p
+    %strong Title:
+    = @day.title
 
-%p
-  %strong Description:
-  = @day.description
+  %p
+    %strong Description:
+    = @day.description
 
-%p
-  = render @day.day_tasks
-  
-%p
-  %div#form
-    = render "day_tasks/form"
+  %p
+    = render @day.day_tasks
+    
+  %p
+    %div#form
+      = render "day_tasks/form"
 
-= link_to 'Edit', edit_day_path(@day)
-= link_to 'Back', days_path
+  = link_to 'Edit', edit_day_path(@day)
+  = link_to 'Back', days_path
