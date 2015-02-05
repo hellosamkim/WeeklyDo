@@ -3,8 +3,50 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .main-wrap {
-  height: 95%;
-  width: 95%;
-  margin: 10px auto;
-  border-radius: 5px;
+  height: 90%;
+  width: 90%;
+  margin: 30px auto 30px;
+  border-radius: 15px;
+  position: relative;
+}
+
+body {
+  background-image: url('../images/bg.png');
+}
+
+.form {
+  text-align: center;
+}
+
+.back-button {
+  position: absolute;
+  margin-top: 2.6%;
+  margin-left: 2%;
+  color: #3c4145;
+  opacity: 0.8;
+
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;  
+}
+
+.back-button:hover {
+  opacity: 1;
+}
+
+.sticky_notes {
+  width: 80%;
+  height: 80%;
+  background: #3c4145;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.col-md-3 {
+  height: 35rem;
+  width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
 }

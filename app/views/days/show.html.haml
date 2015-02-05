@@ -1,11 +1,16 @@
-%div.full-bg
-  #idnotice= notice
-  
-  %div.main-wrap{:style => "background: ##{@day.bg_colour2}"}
-    %div.title{:style => "font-size: 8rem; text-align: center;"}
-      = @day.title
-    %div.form
-      = render "day_tasks/form"
+#idnotice= notice
 
-    = link_to 'Edit', edit_day_path(@day)
-    = link_to 'Back', days_path
+%div.main-wrap{:style => "background: ##{@day.bg_colour2}"}
+  %a{:href => days_path}
+    %div.back-button
+      %i{:class => "fa fa-arrow-circle-left fa-3x"}
+  %div.title{:style => "font-size: 8rem; text-align: center;"}
+    = @day.title
+  %div.day_tasks_wrapper
+    %div.row
+      - @day.day_tasks.each do |task|
+        %div.col-md-3
+          %div.sticky_notes
+            = task.task
+  %div.form
+    = render "day_tasks/form"

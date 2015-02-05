@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 
 @import "bootstrap-sprockets";
@@ -22,12 +23,6 @@
   font-style: normal;
   font-weight: 400;
   src: local('Pacifico Regular'), local('Pacifico-Regular'), url(http://themes.googleusercontent.com/static/fonts/pacifico/v5/yunJt0R8tCvMyj_V4xSjafesZW2xOQ-xsNqO47m55DA.woff) format('woff');
-}
-
-.full-bg {
-  height: 100vh;
-  width: 100vw;
-  background-image: url('../images/bg.png');
 }
 
 #striked {
@@ -69,7 +64,7 @@
 
 .title {
   font-size: 5rem;
-  color:#fff01b;
+  color: #fff569;
   font-family:Pacifico;
   text-shadow: 2px 2px #3d3b3b;
 }
