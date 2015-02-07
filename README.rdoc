@@ -1,28 +1,10 @@
-== README
+== WeeklyDo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A small Todo list app that I built with Rails.
+Gems Used: Haml, Bootstrap, Simple Form, Color Generator, Font Awesome
 
-Things you may want to cover:
+**Screen Shot 1**
+![Alt text](/screenshot1.png?raw=true)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+**Screen Shot 2**
+![Alt text](/screenshot2.png?raw=true)
