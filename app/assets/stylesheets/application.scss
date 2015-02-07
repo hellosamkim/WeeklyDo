@@ -63,7 +63,7 @@
 }
 
 .title {
-  font-size: 5rem;
+  font-size: 6rem;
   color: #fff569;
   font-family:Pacifico;
   text-shadow: 2px 2px #3d3b3b;
@@ -85,9 +85,10 @@ ul {
 
 .description {
   margin-top: 20px;
-  font-family: 'Khula', sans-serif;
-  font-size: 2rem;
+  font-family: 'Rosario', sans-serif;
+  font-size: 1.7rem;
   color: #2a2d30;
+  line-height: 2.2rem;
   text-shadow: 1px 1px #d4d4d4;
 }
 
@@ -95,4 +96,10 @@ ul {
   .bottom-divs {
     display: none;
   }
+}
+
+.col-md-3.stickies {
+  padding-left: 0px;
+  padding-right: 0px; 
+  height: 300px;
 }

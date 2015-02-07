@@ -11,21 +11,24 @@
       %div.row
         - @day.day_tasks.each do |task|
           - if task.finished?
-            %div.col-md-3
+            %div.col-md-3.stickies
               %div.sticky_notes
                 %p#striked
                   = task.task
               %div.options
-                %i{:class => "fa fa-check-circle fa-3x"}
-                = link_to "Finished", finished_day_day_task_path(@day, task.id), method: :patch    
-                = link_to "Delete", day_day_task_path(@day, task.id), method: :delete, data: {confirm: "Are you sure?"}
+                = link_to finished_day_day_task_path(@day, task.id), method: :patch do
+                  %i{:class => ["fa fa-check-circle-o fa-2x", "finished"]} &nbsp
+                = link_to day_day_task_path(@day, task.id), method: :delete, data: {confirm: "Are you sure?"} do
+                  %i{:class => ["fa fa-trash-o fa-2x", "delete"]}
           - else
-            %div.col-md-3
+            %div.col-md-3.stickies
               %div.sticky_notes
                 %p
                   = task.task
               %div.options
-                = link_to "Finished", finished_day_day_task_path(@day, task.id), method: :patch   
-                = link_to "Delete", day_day_task_path(@day, task.id), method: :delete, data: {confirm: "Are you sure?"}
+                = link_to finished_day_day_task_path(@day, task.id), method: :patch do
+                  %i{:class => ["fa fa-check-circle-o fa-2x", "finished"]} &nbsp
+                = link_to day_day_task_path(@day, task.id), method: :delete, data: {confirm: "Are you sure?"} do
+                  %i{:class => ["fa fa-trash-o fa-2x", "delete"]}
       %div.form
         = render "day_tasks/form"

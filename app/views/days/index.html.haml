@@ -13,6 +13,7 @@
               - day.day_tasks.each do |day_task|
                 - if day_task.finished_at == nil
                   %li
+                    %i{:class => "fa fa-fighter-jet"} &nbsp
                     = day_task.task
                   - x += 1
                   - if x >= 3
