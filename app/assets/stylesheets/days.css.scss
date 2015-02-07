@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .main-wrap {
   height: 90%;
   width: 90%;
@@ -50,7 +58,8 @@ body {
 }
 
 .sticky_notes p {
-  padding: 12px;
+  padding: 12px;  
+  @include vertical-align;
 }
 
 .col-md-3 {
