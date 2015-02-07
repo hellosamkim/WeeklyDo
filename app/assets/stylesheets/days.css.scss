@@ -102,6 +102,10 @@ body {
   color: #a35257;
 }
 
+.actions {
+  display: none;
+}
+
 // Mobile Responsive
 
 @media (max-width: 767px) {
@@ -116,5 +120,13 @@ body {
 
   .day_tasks_wrapper {
     margin-top: 50px;
+  }
+
+  .actions {
+    display: block;
+  }
+
+  .submit {
+    margin-top: 5px;
   }
 }
