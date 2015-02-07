@@ -18,6 +18,8 @@
                   - x += 1
                   - if x >= 3
                     - break
+              - if day.all_done == true
+                %p You've Completed All your Tasks for this Day!
 
         
 %div.row
@@ -35,8 +37,14 @@
             %ul
               - x = 0
               - day.day_tasks.each do |day_task|
-                - if day_task.finished_at.empty?
+                - if day_task.finished_at == nil
                   %li
+                    %i{:class => "fa fa-fighter-jet"} &nbsp
                     = day_task.task
+                  - x += 1
+                  - if x >= 3
+                    - break
+              - if day.all_done == true
+                %p You've Completed All your Tasks for this Day!
   %div.col-md-4.bg.bottom-divs
   
