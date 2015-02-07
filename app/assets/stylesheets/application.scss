@@ -90,3 +90,9 @@ ul {
   color: #2a2d30;
   text-shadow: 1px 1px #d4d4d4;
 }
+
+@media (max-width: 767px) {
+  .bottom-divs {
+    display: none;
+  }
+}
