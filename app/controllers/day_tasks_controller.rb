@@ -11,7 +11,7 @@
     if @day_task.destroy
       flash[:sucess] = "Task was deleted"
     else
-      flashp[:error] = "Task could not be deleted, please try again."
+      flash[:error] = "Task could not be deleted, please try again."
     end
     redirect_to @day
   end
