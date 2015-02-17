@@ -1,6 +1,6 @@
 class DayTask < ActiveRecord::Base
   belongs_to :day
-  validates :task , presence:true
+  validates :task, presence: true
 
   x = 0
   def finished?
