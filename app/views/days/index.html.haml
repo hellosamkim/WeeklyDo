@@ -20,8 +20,9 @@
                     - break
               - if day.all_done == true
                 %p You've Completed All your Tasks for this Day!
+          - if day.day_tasks.length > 3
+            %li.etc ...  
 
-        
 %div.row
   %div.col-md-4.bg.bottom-divs
     %img{:src => "/images/logo1.png", :style => "width: 40%; margin-top: 35%;"}
@@ -46,5 +47,7 @@
                     - break
               - if day.all_done == true
                 %p You've Completed All your Tasks for this Day!
+          - if day.day_tasks.length > 3
+            %li.etc ...
   %div.col-md-4.bg.bottom-divs
   
